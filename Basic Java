@@ -1,5 +1,5 @@
-public class Basic Java {
-    public static void Basic Java(String[] args) {
+public class Main {
+    public static void main(String[] args) {
         // Создание переменных всех 8 примитивных типов данных
         int variable1 = 10;                 // Целочисленный тип данных
         double variable2 = 3.14;            // Вещественный тип данных
