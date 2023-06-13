@@ -1,0 +1,32 @@
+   0 mkdir /home/animals/dogs
+   1 cd /home
+   2 ls
+   3 mkdir /home/animals
+   4 mkdir /home/animals/dogs & mkdir /home/animals/cats & mkdir /home/animals/fish
+   5 ls
+   6 cd /animals
+   7 cd animals
+   8 ls
+   9 touch /home/animals/dogs/pluto
+  10 touch /home/animals/fish/nemo
+  11 touch /home/animals/cats/garfield
+  12 mkdir /home/planets
+  13 cd /home
+  14 cd planets
+  15 touch /opt/Mercury
+  16 touch /opt/Venus
+  17 touch /opt/Mars
+  18 touch /opt/Jupiter
+  19 ls
+  20 mv /opt/Mercury /home/planets/
+  21 mv /opt/Venus /home/planets/
+  22 mv /opt/Mars /home/planets/
+  23 mv /opt/Jupiter /home/planets/
+  24 touch /tmp/adam
+  25 mkdir -p /home/humans
+  26 cp /tmp/adam /home/humans
+  27 touch /tmp/evA
+  28 mv /tmp/evA /opt/eve
+  29 mv /opt/eve /home/humans
+  30 ls /home/humans
+  31 history > history_32.txt
