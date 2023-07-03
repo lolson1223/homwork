@@ -1,0 +1,17 @@
+
+date=$(date +%Y-%m-%d)
+echo $date > date.txt
+folder_path="/tmp/hw3/newfile"
+mkdir -p $folder_path
+file_path="$folder_path/homework.txt"
+echo "Homework 3" >> $file_path
+df_output=$(df -h /)
+echo "$df_output" >> $file_path
+history_commands=$(history 5 | awk '{$1=""; print $0}')
+echo "$history_commands" >> $file_path
+cpu_info=$(grep 'vendor_id' /proc/cpuinfo | sort -u -k3)
+echo "$cpu_info" >> $file_path
+vim -c 'g!/^vendor_id/d' -c 'wq' $file_path
+echo
+bash script.sh
+
