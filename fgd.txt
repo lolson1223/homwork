@@ -1,0 +1,9 @@
+mkdir -p /home/user/start
+echo "Start" > /home/user/start/1.txt
+date >> /home/user/start/1.txt
+mkdir -p /opt/task
+cp /home/user/start/1.txt /opt/task/start.txt
+find / -type f -print | tail -n 4 >> /opt/task/start.txt
+cp -r /home/user/task /tmp/testnew
+cat /home/user/readme.txt >> /tmp/testnew/task/start.txt
+rm -r /opt/task
