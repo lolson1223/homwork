@@ -1,30 +1,101 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        boolean isWeekend = true;
-        boolean isRain = false;
-        boolean canWalk = isWeekend && !isRain;
-        System.out.println("Могу ли я пойти гулять? " + canWalk);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите количество учеников: ");
+        int n = scanner.nextInt();
+        int[] grades = new int[n];
 
-        boolean isEdekaOpen = true;
-        boolean isReweOpen = false;
-        boolean canBuy = isEdekaOpen || isReweOpen;
-        System.out.println("Могу ли я купить еду? " + canBuy);
+        System.out.println("Введите оценки для каждого ученика:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Оценка для ученика " + (i + 1) + ": ");
+            grades[i] = scanner.nextInt();
+        }
 
-        int temperature1 = 105;
-        int temperature2 = 95;
-        boolean deviceWorking = checkDevice(temperature1, temperature2);
-        System.out.println("Устройство работает? " + deviceWorking);
-
-        int remainingSeconds = 9000; // Пример значения, можно использовать случайное число в диапазоне от 0 до 28800
-        displayRemainingHours(remainingSeconds);
+        counter(grades);
     }
 
-    public static boolean checkDevice(int temperature1, int temperature2) {
-        return temperature1 > 100 && temperature2 < 100;
+    public static void counter(int[] grades) {
+        int gradeA = 0;
+        int gradeB = 0;
+        int gradeC = 0;
+        int gradeD = 0;
+
+        for (int grade : grades) {
+            switch (grade) {
+                case 5:
+                    gradeA++;
+                    break;
+                case 4:
+                    gradeB++;
+                    break;
+                case 3:
+                    gradeC++;
+                    break;
+                case 2:
+                    gradeD++;
+                    break;
+                default:
+                    System.out.println("Ошибка: Некорректная оценка");
+            }
+        }
+
+        System.out.println("Количество оценок:");
+        System.out.println("A: " + gradeA);
+        System.out.println("B: " + gradeB);
+        System.out.println("C: " + gradeC);
+        System.out.println("D: " + gradeD);
     }
 
-    public static void displayRemainingHours(int remainingSeconds) {
-        int remainingHours = remainingSeconds / 3600;
-        System.out.println("Осталось " + remainingHours + " час/а/ов");
+
+    public class рain {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Введите количество учеников: ");
+            int n = scanner.nextInt();
+            int[] grades = new int[n];
+
+            System.out.println("Введите оценки для каждого ученика:");
+            for (int i = 0; i < n; i++) {
+                System.out.print("Оценка для ученика " + (i + 1) + ": ");
+                grades[i] = scanner.nextInt();
+            }
+
+            counter(grades);
+        }
+
+        public static void counter(int[] grades) {
+            int gradeA = 0;
+            int gradeB = 0;
+            int gradeC = 0;
+            int gradeD = 0;
+
+            for (int grade : grades) {
+                switch (grade) {
+                    case 5:
+                        gradeA++;
+                        break;
+                    case 4:
+                        gradeB++;
+                        break;
+                    case 3:
+                        gradeC++;
+                        break;
+                    case 2:
+                        gradeD++;
+                        break;
+                    default:
+                        System.out.println("Ошибка: Некорректная оценка");
+                }
+            }
+
+            System.out.println("Количество оценок:");
+            System.out.println("A: " + gradeA);
+            System.out.println("B: " + gradeB);
+            System.out.println("C: " + gradeC);
+            System.out.println("D: " + gradeD);
+        }
     }
+
 }
